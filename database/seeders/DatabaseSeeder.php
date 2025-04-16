@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+<<<<<<< HEAD
         // User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
@@ -24,6 +25,11 @@ class DatabaseSeeder extends Seeder
             // PeriksaSeeder::class
             DetailPeriksaSeeder::class
             // ObatSeeder::class
+=======
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+>>>>>>> 13631e53cc77e502521656cb681b8d0d87f456ef
         ]);
     }
 }

@@ -3,7 +3,10 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+<<<<<<< HEAD
 use App\Http\Middleware\RoleMiddleware;
+=======
+>>>>>>> 13631e53cc77e502521656cb681b8d0d87f456ef
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -12,6 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+<<<<<<< HEAD
         $middleware->alias([
             'role' => RoleMiddleware::class,
         ]);
@@ -19,3 +23,10 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
+=======
+        //
+    })
+    ->withExceptions(function (Exceptions $exceptions) {
+        //
+    })->create();
+>>>>>>> 13631e53cc77e502521656cb681b8d0d87f456ef

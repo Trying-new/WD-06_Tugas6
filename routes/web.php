@@ -1,13 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DokterController;
+=======
+>>>>>>> 13631e53cc77e502521656cb681b8d0d87f456ef
 
 Route::get('/', function () {
     return view('layouts.main');
 });
+<<<<<<< HEAD
 
 Route::get('/dokter', function () {
     return view('list-dokter');
@@ -48,4 +52,11 @@ Route::middleware(['auth', 'role:dokter'])->group(function () {
 
 Route::middleware(['auth', 'role:pasien'])->group(function () {
     Route::get('/dokter', [DokterController::class, 'index'])->name('dokter.index');
+=======
+Route::get('/dokter', function () {
+    return view('list-dokter');
+});
+Route::get('/obat', function () {
+    return view('list-obat');
+>>>>>>> 13631e53cc77e502521656cb681b8d0d87f456ef
 });

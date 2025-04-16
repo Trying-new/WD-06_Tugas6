@@ -27,6 +27,7 @@ class User extends Authenticatable
         'alamat'
     ];
 
+<<<<<<< HEAD
     public function pasien(): HasMany
     {
         return $this->hasMany(Periksa::class,'id_pasien');
@@ -37,6 +38,17 @@ class User extends Authenticatable
         return $this->hasMany(Periksa::class,'id_dokter');
     }
 
+=======
+    // relasi ke periksa sebagai pasien
+    public function pasien(): HasMany{
+        return $this->hasMany(Periksa::class, 'id_pasien');
+    }
+
+    // relasi ke periksa sebagai dokter
+    public function dokter(): HasMany{
+        return $this->hasMany(Periksa::class, 'id_dokter');
+    }
+>>>>>>> 13631e53cc77e502521656cb681b8d0d87f456ef
     /**
      * The attributes that should be hidden for serialization.
      *
